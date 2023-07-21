@@ -19,23 +19,34 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="fine">
+    <meta name="description" content="关于定时器与中断系统的一点理解与想法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tags标签测试">
-<meta property="og:url" content="http://example.com/2023/07/19/tags%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:title" content="定时器与中断系统">
+<meta property="og:url" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="fine">
+<meta property="og:description" content="关于定时器与中断系统的一点理解与想法。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-19T11:58:34.000Z">
-<meta property="article:modified_time" content="2023-07-19T11:59:24.651Z">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_3.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_1.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_2.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_11.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_4.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_5.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_6.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_8.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_9.jpg">
+<meta property="og:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_10.jpg">
+<meta property="article:published_time" content="2023-07-21T07:12:24.000Z">
+<meta property="article:modified_time" content="2023-07-21T16:59:30.927Z">
 <meta property="article:author" content="moonf99">
-<meta property="article:tag" content="test">
+<meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_3.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon2.ico">
     
-    <title>tags标签测试 · moon99</title>
+    <title>定时器与中断系统 · moon99</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -261,7 +272,7 @@
                 <a href="/">moonf99</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">tags标签测试</a>
+                <a href="#" class="post-name">定时器与中断系统</a>
             </div>
         </div>
     
@@ -307,7 +318,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                tags标签测试
+                定时器与中断系统
             <!-- 404 -->
             
         </h1>
@@ -327,7 +338,7 @@
                     <div class= post-intro-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="test">test</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="嵌入式">嵌入式</a>
     
 </div>
 
@@ -337,7 +348,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/07/19</span>
+                    <span class="post-intro-time">2023/07/21</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -492,16 +503,71 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <p> fine</p>
+        <p>关于定时器与中断系统的一点理解与想法。</p>
+<span id="more"></span>
 
+<h1 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h1><p>在一个单片机上，我们可能会挂载多个设备，为了能够使其高效运行，我们通常会使用到定时器与中断系统。  </p>
+<h2 id="定时器的工作原理："><a href="#定时器的工作原理：" class="headerlink" title="定时器的工作原理："></a>定时器的工作原理：</h2><p>51单片机内部有一个12MHZ的晶振(有些开发板上可能是11.0592MHZ)，我们给其配置定时初值，每经过一个指令周期都会+1，当其溢出后，若CPU响应该中断，则会进入中断函数。  </p>
+<h2 id="定时器-Timer-的配置"><a href="#定时器-Timer-的配置" class="headerlink" title="定时器(Timer)的配置"></a>定时器(Timer)的配置</h2><p><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_3.jpg" alt="这是图片" title="T_3">  </p>
+<h3 id="定时器-计数器控制寄存器TCON"><a href="#定时器-计数器控制寄存器TCON" class="headerlink" title="定时器&#x2F;计数器控制寄存器TCON"></a>定时器&#x2F;计数器控制寄存器TCON</h3><p>TCON为定时器&#x2F;计数器T0，T1的控制寄存器，同时也锁存T0，T1溢出中断源和外部请求中断源等。<br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_1.jpg" alt="这是图片" title="T_1">  </p>
+<blockquote>
+<p>TF1：定时器&#x2F;计数器T1溢出标志。<br>TR1：定时器T1的运行控制位。<br>TF0：定时器&#x2F;计数器T0溢出标志。发生中断时，TF0由硬件自动置1，当CPU响应中断后，才由硬件清零。<br>TR0：定时器T0的运行控制位。该位由软件置位和清零。当GATE(TMOD.3)&#x3D;0，TR0&#x3D;1时就允许T0开始计数，TR0&#x3D;0时禁止T0计数。当GATE(TMOD.3)&#x3D;1，TR1&#x3D;0且INT0输入高电平时(既外部中断关闭和定时器1关闭时)，才允许T0计数。<br>IE1：外部中断1请求源(INT1&#x2F;P3.3)标志。<br>IT1：外部中断1触发方式控制位。<br>IE0：外部中断0请求源(INT0&#x2F;P3.2)标志。外部中断0请求源(INT0&#x2F;P3.2)标志。IE0&#x3D;1外部中断0向CPU请求中断，当CPU响应外部中断时，由硬件清零IE0(边缘触发方式)。<br>IT0：外部中断0触发方式控制位。</p>
+</blockquote>
+<p><strong>注意：由于TCON寄存器可位寻址，所以可以对其每个位进行单独配置！</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TF0=0;//清除TF0标志</span><br><span class="line">TR0=1;//定时器0开始计时</span><br></pre></td></tr></table></figure>
+
+<h3 id="定时器-计数器工作模式寄存器TMOD"><a href="#定时器-计数器工作模式寄存器TMOD" class="headerlink" title="定时器&#x2F;计数器工作模式寄存器TMOD"></a>定时器&#x2F;计数器工作模式寄存器TMOD</h3><p>定时和计数功能由特殊功能寄存器TMOD的控制位C&#x2F;T进行选择。<br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_2.jpg" alt="这是图片" title="T_2"><br>可以看出TMOD寄存器的高8位控制定时器1，低8位控制定时器0，需要注意的是，TMOD寄存器<strong>不可位寻址！</strong>  </p>
+<blockquote>
+<p>TMOD.7：TMOD.7控制定时器1，置1时只有在INT1脚为高及TR1控制位置1时才可打开定时器&#x2F;计数器1。<br>TMOD.3：TMOD.3控制定时器0，置1时只有在INT0脚为高及TR0控制位置1时才可打开定时器&#x2F;计数器0。<br>TMOD.6：TMOD.6控制定时器1用作定时器或计数器，清零则用作定时器(从内部系统时钟进入)，置1用作计数器(从T1&#x2F;P3.5脚输入)<br>TMOD.2：TMOD.2控制定时器0用作定时器或计数器，清零则用作定时器(从内部系统时钟进入)，置1用作计数器(从T0&#x2F;P3.4脚输入)<br>TMOD.5&#x2F;TMOD.4：定时器&#x2F;计数器1模式选择(0 0)，(0 1)，(1 0)，(1 1)<br>TMOD.1&#x2F;TMOD.0：定时器&#x2F;计数器0模式选择(0 0)，(0 1)，(1 0)，(1 1)  </p>
+</blockquote>
+<p>工作模式1(常用)框图<br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_11.jpg" alt="这是图片" title="T_11">  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//	TMOD=0x01;//0000 0001 这里将定时器0设定为16位定时器模式</span><br><span class="line">TMOD=TMOD&amp;0xF0;//把TMOD的低4位清0 高4位保持不变 设定定时器模式</span><br><span class="line">TMOD=TMOD|0x01;//把TMOD的最低位置1 高4位保持不变 设定定时器模式</span><br><span class="line">//高4位保持不变是为了防止需要配置到两个定时器时发生相互干扰的情况发生！</span><br></pre></td></tr></table></figure>
+
+<h3 id="TH0与TL0"><a href="#TH0与TL0" class="headerlink" title="TH0与TL0"></a>TH0与TL0</h3><p>TH0(Timer High 0)与TL0(Timer Low 0)分别用来设定定时器0初值的高8位与低8位。 </p>
+<blockquote>
+<p>如何设定定时器初值？<br>已知定时器每1us计数加1，加到65535us(65ms)则发生溢出， 这样的话可以将初值设定为64535，与65535的差值刚好是1000us(1ms)，即1ms后发生溢出。</p>
+</blockquote>
+<h3 id="TH1与TL1"><a href="#TH1与TL1" class="headerlink" title="TH1与TL1"></a>TH1与TL1</h3><p>用来设定定时器1，方法同上。  </p>
+<hr>
+<h1 id="中断系统-Timer0-1"><a href="#中断系统-Timer0-1" class="headerlink" title="中断系统(Timer0&#x2F;1)"></a>中断系统(Timer0&#x2F;1)</h1><p>能够使CPU处理多种突发任务，我们需要用到中断系统。当定时器的高位发生溢出时，则会进入某个中断服务函数，处理完后退出到主函数，直到下次溢出。进入中断服务函数，由于MCU的处理速度很快，我们总误认为MCU是多线程的，事实上，MCU在一个时刻只会处理一个事件，处理完后才会进入下个事件，所以MCU其实是在单线程地处理事件。  </p>
+<h2 id="51系列单片机中断请求源"><a href="#51系列单片机中断请求源" class="headerlink" title="51系列单片机中断请求源"></a>51系列单片机中断请求源</h2><p><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_4.jpg" alt="这是图片" title="T_4"><br>及中断查询次序号<br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_5.jpg" alt="这是图片" title="T_5">  </p>
+<h2 id="中断结构"><a href="#中断结构" class="headerlink" title="中断结构"></a>中断结构</h2><p><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_6.jpg" alt="这是图片" title="T_6"></p>
+<p>以定时器0为例：先设置中断请求标志位(TF0)，再设置溢出中断允许位(ET0)，打开总中断(EA)，接着进入中断优先级控制位(PT0)。  </p>
+<h3 id="中断允许寄存器IE-Timer0-1"><a href="#中断允许寄存器IE-Timer0-1" class="headerlink" title="中断允许寄存器IE(Timer0&#x2F;1)"></a>中断允许寄存器IE(Timer0&#x2F;1)</h3><p>用于是否允许中断</p>
+<blockquote>
+<p>ET0：T0的溢出中断允许位。ET0&#x3D;1，允许T0中断，ET0&#x3D;0禁止T0中断。<br>ET1：作用同上。  </p>
+</blockquote>
+<p><strong>注意：寄存器IE可位寻址！</strong>  </p>
+<h3 id="中断优先级控制寄存器IPH-IP-Timer0-1"><a href="#中断优先级控制寄存器IPH-IP-Timer0-1" class="headerlink" title="中断优先级控制寄存器IPH&#x2F;IP(Timer0&#x2F;1)"></a>中断优先级控制寄存器IPH&#x2F;IP(Timer0&#x2F;1)</h3><p><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_8.jpg" alt="这是图片" title="T_8"><br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_9.jpg" alt="这是图片" title="T_9"><br>PT0H,PT0：定时器中断优先级控制位。  </p>
+<blockquote>
+<p>当PT0H&#x3D;0且PT0&#x3D;0时，定时器0中断位最低优先级中断(优先级0)<br>当PT0H&#x3D;0且PT0&#x3D;1时，定时器0中断位较低优先级中断(优先级1)<br>当PT0H&#x3D;1且PT0&#x3D;0时，定时器0中断位较高优先级中断(优先级2)<br>当PT0H&#x3D;1且PT0&#x3D;1时，定时器0中断位最高优先级中断(优先级3)  </p>
+</blockquote>
+<p>PT1H，PT1：定时器1中断优先级控制位。  </p>
+<blockquote>
+<p>作用同上。</p>
+</blockquote>
+<p><strong>注意：IPH不可位寻址，IP可位寻址！</strong>  </p>
+<h3 id="定时器-计数器0-1控制寄存器TCON"><a href="#定时器-计数器0-1控制寄存器TCON" class="headerlink" title="定时器&#x2F;计数器0&#x2F;1控制寄存器TCON"></a>定时器&#x2F;计数器0&#x2F;1控制寄存器TCON</h3><p>TCON位定时器&#x2F;计数器T0，T1的控制寄存器，同时也锁存T0，T1溢出中断源和外部请求中断源等。<br><img src="/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/T_10.jpg" alt="这是图片" title="T_10">  </p>
+<blockquote>
+<p>TR0：定时器0的运行控制位。<br>TF0：T0溢出中断标志。由硬件置1或清0，在CPU响应后才清0。<br>TR1，TF1同上。</p>
+</blockquote>
+<p><strong>注意：TCON可位寻址！</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TF0=0;//清除TF0标志</span><br><span class="line">TR0=1;//定时器0开始计时</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="食用例"><a href="#食用例" class="headerlink" title="食用例"></a>食用例</h1><p>按键控制LED流水灯模式<br>按下键码1控制流水灯顺序<br>Timer0.c</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">oid Timer0Init()</span><br><span class="line">&#123;</span><br><span class="line">//	TMOD=0x01;//0000 0001</span><br><span class="line">	TMOD=TMOD&amp;0xF0;//把TMOD的低4位清0 高4位保持不变 设定定时器模式</span><br><span class="line">	TMOD=TMOD|0x01;//把TMOD的最低位置1 高4位保持不变 设定定时器模式</span><br><span class="line">	TL0=0x18;//64535%256</span><br><span class="line">	TH0=0xFC;//64535/256</span><br><span class="line">	TF0=0;//清除TF0标志</span><br><span class="line">	TR0=1;//定时器0开始计时</span><br><span class="line">	ET0=1;//T0的溢出中断允许位</span><br><span class="line">	EA=1;</span><br><span class="line">	PT0=0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*定时器中断函数模板</span><br><span class="line">void Timer0_Routine() interrupt 1</span><br><span class="line">&#123;</span><br><span class="line">	static unsigned int T0Count;</span><br><span class="line">	TL0=0x18;</span><br><span class="line">	TH0=0xFC;</span><br><span class="line">	T0Count++;</span><br><span class="line">	if(T0Count&gt;=1000)</span><br><span class="line">	&#123;</span><br><span class="line">		T0Count=0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">*/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>main.c  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">unsigned char KeyNum,LEDMode;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	P2=0xFE;</span><br><span class="line">	Timer0Init();</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		KeyNum=Key();</span><br><span class="line">		if(KeyNum)</span><br><span class="line">		&#123;</span><br><span class="line">			if(KeyNum==1)</span><br><span class="line">			&#123;</span><br><span class="line">				LEDMode++;</span><br><span class="line">				if(LEDMode&gt;=2)LEDMode=0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void Timer0_Routine() interrupt 1</span><br><span class="line">&#123;</span><br><span class="line">	static unsigned int T0Count;</span><br><span class="line">	TL0=0x18;</span><br><span class="line">	TH0=0xFC;</span><br><span class="line">	T0Count++;</span><br><span class="line">	if(T0Count&gt;=500)</span><br><span class="line">	&#123;</span><br><span class="line">		T0Count=0;</span><br><span class="line">		if(LEDMode==0)</span><br><span class="line">		&#123;</span><br><span class="line">			P2=_crol_(P2,1);</span><br><span class="line">		&#125;</span><br><span class="line">		if(LEDMode==1)</span><br><span class="line">		&#123;</span><br><span class="line">			P2=_cror_(P2,1);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://example.com">moonf99</a>
-            <p>Link：<a href="http://example.com/2023/07/19/tags%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/">http://example.com/2023/07/19/tags%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/</a>
-            <p>Publish date：<a href="http://example.com/2023/07/19/tags%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/">July 19th 2023, 7:58:34 pm</a>
-            <p>Update date：<a href="http://example.com/2023/07/19/tags%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/">July 19th 2023, 7:59:24 pm</a>
+            <p>Link：<a href="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/">http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/</a>
+            <p>Publish date：<a href="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/">July 21st 2023, 3:12:24 pm</a>
+            <p>Update date：<a href="http://example.com/2023/07/21/%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8E%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F/">July 22nd 2023, 12:59:30 am</a>
             <p>License：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -509,17 +575,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/07/20/I2C%E6%80%BB%E7%BA%BF/" title="I2C总线">
-                    <div class="nextTitle">I2C总线</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/07/19/%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/" title="标签与分类">
-                    <div class="prevTitle">标签与分类</div>
+                <a href="/2023/07/20/I2C%E6%80%BB%E7%BA%BF/" title="I2C总线">
+                    <div class="prevTitle">I2C总线</div>
                 </a>
             
         </li>
@@ -659,7 +720,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">定时器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">定时器的工作原理：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-Timer-%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">定时器(Timer)的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-%E8%AE%A1%E6%95%B0%E5%99%A8%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8TCON"><span class="toc-number">1.2.1.</span> <span class="toc-text">定时器&#x2F;计数器控制寄存器TCON</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-%E8%AE%A1%E6%95%B0%E5%99%A8%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F%E5%AF%84%E5%AD%98%E5%99%A8TMOD"><span class="toc-number">1.2.2.</span> <span class="toc-text">定时器&#x2F;计数器工作模式寄存器TMOD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TH0%E4%B8%8ETL0"><span class="toc-number">1.2.3.</span> <span class="toc-text">TH0与TL0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TH1%E4%B8%8ETL1"><span class="toc-number">1.2.4.</span> <span class="toc-text">TH1与TL1</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%B3%BB%E7%BB%9F-Timer0-1"><span class="toc-number">2.</span> <span class="toc-text">中断系统(Timer0&#x2F;1)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#51%E7%B3%BB%E5%88%97%E5%8D%95%E7%89%87%E6%9C%BA%E4%B8%AD%E6%96%AD%E8%AF%B7%E6%B1%82%E6%BA%90"><span class="toc-number">2.1.</span> <span class="toc-text">51系列单片机中断请求源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">中断结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E5%85%81%E8%AE%B8%E5%AF%84%E5%AD%98%E5%99%A8IE-Timer0-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">中断允许寄存器IE(Timer0&#x2F;1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%AD%E4%BC%98%E5%85%88%E7%BA%A7%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8IPH-IP-Timer0-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">中断优先级控制寄存器IPH&#x2F;IP(Timer0&#x2F;1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8-%E8%AE%A1%E6%95%B0%E5%99%A80-1%E6%8E%A7%E5%88%B6%E5%AF%84%E5%AD%98%E5%99%A8TCON"><span class="toc-number">2.2.3.</span> <span class="toc-text">定时器&#x2F;计数器0&#x2F;1控制寄存器TCON</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A3%9F%E7%94%A8%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">食用例</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
