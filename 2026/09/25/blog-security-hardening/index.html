@@ -21,20 +21,25 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="images">
-<meta property="og:url" content="https://moonf99.github.io/images/index.html">
+    <meta name="description" content="重新找回这个博客的维护方法后，我请 Codex 帮忙检查了它的安全性。本文记录这次实际完成的检查、代码修改和验证，也保留尚未处理的问题，方便以后接着维护。 这是一轮基础加固，不是一份“网站已经绝对安全”的证明。本文所述改动已在本地构建验证；远程账户设置和完整浏览器交互不在本次已验证范围内。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给旧博客做一次安全加固：检查、修改与验证">
+<meta property="og:url" content="https://moonf99.github.io/2026/09/25/blog-security-hardening/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="重新找回这个博客的维护方法后，我请 Codex 帮忙检查了它的安全性。本文记录这次实际完成的检查、代码修改和验证，也保留尚未处理的问题，方便以后接着维护。 这是一轮基础加固，不是一份“网站已经绝对安全”的证明。本文所述改动已在本地构建验证；远程账户设置和完整浏览器交互不在本次已验证范围内。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-07-20T18:44:02.000Z">
-<meta property="article:modified_time" content="2023-07-20T18:44:02.913Z">
+<meta property="article:published_time" content="2026-09-25T12:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-25T12:00:00.000Z">
 <meta property="article:author" content="moonf99">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="网站安全">
+<meta property="article:tag" content="GitHub Pages">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon2.ico">
     
-    <title>images · moon99</title>
+    <title>给旧博客做一次安全加固：检查、修改与验证 · moon99</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -216,6 +221,8 @@
 
     <script src="/lib/jquery.min.js"></script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -245,6 +252,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">moonf99</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">给旧博客做一次安全加固：检查、修改与验证</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -271,24 +289,75 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
     
+        
+    <!-- 404页  -->
+    
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg2.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                给旧博客做一次安全加固：检查、修改与验证
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Hexo">Hexo</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="网站安全">网站安全</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="GitHub Pages">GitHub Pages</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2026/09/25</span>
+                    <!-- busuanzi -->
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -420,15 +489,117 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        
+        <p>重新找回这个博客的维护方法后，我请 Codex 帮忙检查了它的安全性。本文记录这次实际完成的检查、代码修改和验证，也保留尚未处理的问题，方便以后接着维护。</p>
+<p>这是一轮基础加固，不是一份“网站已经绝对安全”的证明。本文所述改动已在本地构建验证；远程账户设置和完整浏览器交互不在本次已验证范围内。</p>
+<span id="more"></span>
+
+<h2 id="一、先确认网站是怎么运行的"><a href="#一、先确认网站是怎么运行的" class="headerlink" title="一、先确认网站是怎么运行的"></a>一、先确认网站是怎么运行的</h2><p>检查公开仓库和本地工程后，确认这个网站使用 Hexo 6.3.0、Archer 主题，由 GitHub Pages 托管。公开仓库的 main 分支保存生成后的 HTML、CSS、JavaScript 和图片；本地工程还保留文章 Markdown、主题模板和配置。</p>
+<p>维护流程因此是：修改源文件，生成静态网页，检查结果，再发布。直接修改生成目录中的 HTML，下一次构建时可能被覆盖。</p>
+<p>本轮主要检查了以下位置：</p>
+<ul>
+<li><code>package.json</code> 和 <code>package-lock.json</code>：构建依赖及锁定版本。</li>
+<li><code>_config.yml</code> 和 <code>_config.archer.yml</code>：网址、主题、统计和图表配置。</li>
+<li><code>themes/archer/layout/</code>：页面模板与脚本引用。</li>
+<li><code>source/</code> 和 <code>public/</code>：发布输入与生成结果。</li>
+<li><code>.gitignore</code>：哪些本地文件会被排除在版本管理之外。</li>
+</ul>
+<p>开始修改前，备份了将要改动的配置和模板，并记录文件清单。文章内容和已有图片没有被替换。</p>
+<h2 id="二、降低凭证误上传的风险"><a href="#二、降低凭证误上传的风险" class="headerlink" title="二、降低凭证误上传的风险"></a>二、降低凭证误上传的风险</h2><p>检查发现，本地工程需要更明确的凭证隔离规则。此次没有在聊天或文章中展示真实密钥，也没有删除或移动原有凭证。</p>
+<p>首先补充 <code>.gitignore</code>，忽略本地凭证文件、常见私钥文件以及 <code>.env</code> 配置。需要注意：忽略规则主要影响尚未跟踪的文件，不能清除已经提交的内容，更不能让已泄露的密钥失效。</p>
+<p>其次新增 <code>scripts/security-guard.js</code>，利用 Hexo 的过滤器执行检查：</p>
+<table>
+<thead>
+<tr>
+<th>执行时机</th>
+<th>检查目录</th>
+<th>处理方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>before_generate</code></td>
+<td><code>source/</code></td>
+<td>检测到可疑内容就停止生成</td>
+</tr>
+<tr>
+<td><code>before_deploy</code></td>
+<td><code>public/</code></td>
+<td>检测到可疑内容就停止发布</td>
+</tr>
+</tbody></table>
+<p>检查内容包括常见凭证文件名、私钥文本标记、部分令牌格式以及符号链接。错误信息只显示相关文件路径，不输出疑似密钥正文。</p>
+<p>这是防止误操作的基础检查，不能识别所有秘密格式；也不能替代仓库历史审计。当前下载的公开仓库快照中，没有匹配到本次扫描覆盖的私钥或令牌格式，但没有据此推断历史上从未泄露。</p>
+<h2 id="三、调整前端脚本的加载方式"><a href="#三、调整前端脚本的加载方式" class="headerlink" title="三、调整前端脚本的加载方式"></a>三、调整前端脚本的加载方式</h2><h3 id="更新并本地加载-jQuery"><a href="#更新并本地加载-jQuery" class="headerlink" title="更新并本地加载 jQuery"></a>更新并本地加载 jQuery</h3><p>主题原来引用 CDN 上的 jQuery 3.6.0，并带有一段失效的加载回退代码。本轮将其更新为 3.7.1，保存在主题的本地静态资源目录中，由网站自身提供。</p>
+<p>相关修改位于 <code>layout.ejs</code>、<code>base-head.ejs</code> 和 <code>source/lib/jquery.min.js</code>。这样可以减少对第三方脚本地址的运行时依赖，也移除了不可靠的回退逻辑。</p>
+<h3 id="为-Fancybox-加入完整性校验"><a href="#为-Fancybox-加入完整性校验" class="headerlink" title="为 Fancybox 加入完整性校验"></a>为 Fancybox 加入完整性校验</h3><p>图片查看组件暂时保留固定版本 Fancybox 3.5.7。下载对应脚本后计算 SHA-384 摘要，并在脚本标签上添加 <code>integrity</code> 和 <code>crossorigin=&quot;anonymous&quot;</code>。</p>
+<p>浏览器会校验拿到的脚本是否符合指定摘要。以后如果升级文件，必须同步更新摘要。</p>
+<p>完整性校验防的是脚本内容被替换，不是库本身的漏洞。因此不能把这一步当成 Fancybox 已完成安全升级。</p>
+<h3 id="停用暂时不用的脚本"><a href="#停用暂时不用的脚本" class="headerlink" title="停用暂时不用的脚本"></a>停用暂时不用的脚本</h3><p>本轮关闭了不蒜子访问统计，页面不再显示访问计数，也不再加载对应统计脚本。</p>
+<p>检查现有 Markdown 后，未发现 Mermaid 图表代码块或对应 HTML 标记，因此关闭了主题中旧版 Mermaid 的前端加载。构建插件依赖没有随之卸载；将来需要图表时，应先升级和验证，再恢复功能。</p>
+<h2 id="四、补充浏览器侧的基础保护"><a href="#四、补充浏览器侧的基础保护" class="headerlink" title="四、补充浏览器侧的基础保护"></a>四、补充浏览器侧的基础保护</h2><p>在公共页面头部加入以下 Content Security Policy：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;; upgrade-insecure-requests</span><br></pre></td></tr></table></figure>
+
+<p>它限制对象嵌入、页面基准地址和表单提交目标，并要求浏览器升级可适用的不安全资源请求。</p>
+<p>这只是基础 CSP，没有设置严格的 <code>script-src</code>，也没有解决旧主题所有内联脚本和事件处理方式，不能宣称全面阻断了 XSS。通过 HTML 元标签设置 CSP 也不等同于控制所有服务器响应头。</p>
+<p>同时新增：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;strict-origin-when-cross-origin&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>对打开新窗口的链接，统一保留原有 <code>rel</code> 值并补充 <code>noopener noreferrer</code>，降低新页面访问来源窗口的风险，并减少该链接向目标发送来源信息。</p>
+<h2 id="五、修正元信息和网址配置"><a href="#五、修正元信息和网址配置" class="headerlink" title="五、修正元信息和网址配置"></a>五、修正元信息和网址配置</h2><p>原站点配置还使用示例网址。本轮将其修正为：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://moonf99.github.io</span></span><br></pre></td></tr></table></figure>
+
+<p>主题中的知识共享许可链接也改为 HTTPS。</p>
+<p>另外，页面 HTML 元信息改用转义输出；<code>site-meta.ejs</code> 中的配置值通过 JSON 序列化，并转义可能影响脚本边界的字符。这样可以避免带特殊字符的配置意外破坏 HTML 属性或内联脚本结构。</p>
+<h2 id="六、实际做了哪些验证"><a href="#六、实际做了哪些验证" class="headerlink" title="六、实际做了哪些验证"></a>六、实际做了哪些验证</h2><p>完成首轮修改后，在博客工程中运行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm.cmd run build</span><br></pre></td></tr></table></figure>
+
+<p>构建成功。添加本文之前，对生成的 20 个 HTML 页面执行了自动检查：</p>
+<ul>
+<li>所有页面包含基础 CSP。</li>
+<li>新窗口链接均具备相应的外链保护。</li>
+<li>HTTPS 外部脚本包含完整性校验属性。</li>
+<li>页面不再加载旧统计脚本和 Mermaid 脚本。</li>
+<li>页面不再引用原来的示例站点网址。</li>
+</ul>
+<p>还执行了针对性的行为测试：使用虚构的私钥标记和测试 <code>.env</code> 文件，确认检查能阻止生成或发布；实际源文件和生成目录通过扫描。测试中的凭证内容均为虚构数据，不包含真实密钥。</p>
+<p>对脚本配置转义，使用包含脚本结束标签的测试字符串验证：渲染结果不会直接插入危险标签，JavaScript 读取后的配置值仍与输入一致。</p>
+<p>这些检查覆盖了构建结果和新增防护逻辑，没有完成整个网站在浏览器中的交互回归。</p>
+<h2 id="七、仍然存在的问题"><a href="#七、仍然存在的问题" class="headerlink" title="七、仍然存在的问题"></a>七、仍然存在的问题</h2><p>依赖扫描使用：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm.cmd audit <span class="literal">--omit</span>=dev</span><br></pre></td></tr></table></figure>
+
+<p>现有锁文件共报告 30 项告警：2 项 critical、13 项 high、10 项 moderate、5 项 low。这是当时的依赖扫描结果，会随漏洞数据库和依赖版本变化。</p>
+<p>其中包含构建工具和传递依赖，不能直接解读为静态网站存在 30 个可被访客远程利用的漏洞。但它们仍值得处理，特别是构建时会读取不可信内容的工具。</p>
+<p>本轮没有直接跨大版本升级 Hexo 和所有插件。下一步应在独立副本中升级、构建和检查旧主题，避免一次性升级导致图片、样式或文章渲染失效。</p>
+<p>还需要继续处理：</p>
+<ul>
+<li>检查旧前端组件是否应替换，而不只依靠完整性校验。</li>
+<li>改造内联脚本后，逐步收紧 CSP。</li>
+<li>检查 GitHub 账户二步验证、仓库访问权限及 Pages 的强制 HTTPS 设置。</li>
+<li>另行检查历史提交是否包含敏感信息；如确认泄露，应撤销并轮换对应凭证。</li>
+</ul>
+<p>这些账户配置和凭证轮换并未在本次操作中完成。</p>
+<h2 id="八、以后怎样维护"><a href="#八、以后怎样维护" class="headerlink" title="八、以后怎样维护"></a>八、以后怎样维护</h2><p>修改文章后先构建、预览，确认正常后再运行发布命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm.cmd run build</span><br><span class="line">npm.cmd run server</span><br></pre></td></tr></table></figure>
+
+<p>在本地浏览器检查页面。结束预览后，再按需要执行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm.cmd run deploy</span><br></pre></td></tr></table></figure>
+
+<p>新增的发布检查会在 Hexo 发布流程中运行。应继续使用正确的发布流程，避免把整个本地工程直接当作静态站点上传。</p>
+<p>配置和模板的修改均保留了备份。如果需要回滚，恢复相应原文件、移除新增检查脚本，再重新生成。备份和凭证应保存在发布目录之外。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener noreferrer" href="https://hexo.io/zh-cn/docs/one-command-deployment">Hexo：一键部署</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https">GitHub：使用 HTTPS 保护 Pages 网站</a></li>
+<li><a target="_blank" rel="noopener noreferrer" href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP：Content Security Policy Cheat Sheet</a></li>
+</ul>
+<p>本文根据 Codex 在本项目中的实际操作记录整理。</p>
+
     </article>
     <!-- license -->
     
         <div class="license-wrapper">
             <p>Author：<a href="https://moonf99.github.io">moonf99</a>
-            <p>Link：<a href="https://moonf99.github.io/images/index.html">https://moonf99.github.io/images/index.html</a>
-            <p>Publish date：<a href="https://moonf99.github.io/images/index.html">July 21st 2023, 2:44:02 am</a>
-            <p>Update date：<a href="https://moonf99.github.io/images/index.html">July 21st 2023, 2:44:02 am</a>
+            <p>Link：<a href="https://moonf99.github.io/2026/09/25/blog-security-hardening/">https://moonf99.github.io/2026/09/25/blog-security-hardening/</a>
+            <p>Publish date：<a href="https://moonf99.github.io/2026/09/25/blog-security-hardening/">September 25th 2026, 8:00:00 pm</a>
+            <p>Update date：<a href="https://moonf99.github.io/2026/09/25/blog-security-hardening/">September 25th 2026, 8:00:00 pm</a>
             <p>License：本文采用<a rel="license noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -438,6 +609,11 @@
             
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2023/07/24/%E4%B8%B2%E8%A1%8C%E5%8F%A3%E9%80%9A%E4%BF%A1/" title="串行口通信">
+                    <div class="prevTitle">串行口通信</div>
+                </a>
             
         </li>
     </ul>
@@ -554,6 +730,23 @@
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E7%A1%AE%E8%AE%A4%E7%BD%91%E7%AB%99%E6%98%AF%E6%80%8E%E4%B9%88%E8%BF%90%E8%A1%8C%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">一、先确认网站是怎么运行的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%99%8D%E4%BD%8E%E5%87%AD%E8%AF%81%E8%AF%AF%E4%B8%8A%E4%BC%A0%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">2.</span> <span class="toc-text">二、降低凭证误上传的风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%B0%83%E6%95%B4%E5%89%8D%E7%AB%AF%E8%84%9A%E6%9C%AC%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">三、调整前端脚本的加载方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E5%B9%B6%E6%9C%AC%E5%9C%B0%E5%8A%A0%E8%BD%BD-jQuery"><span class="toc-number">3.1.</span> <span class="toc-text">更新并本地加载 jQuery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA-Fancybox-%E5%8A%A0%E5%85%A5%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A0%A1%E9%AA%8C"><span class="toc-number">3.2.</span> <span class="toc-text">为 Fancybox 加入完整性校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9C%E7%94%A8%E6%9A%82%E6%97%B6%E4%B8%8D%E7%94%A8%E7%9A%84%E8%84%9A%E6%9C%AC"><span class="toc-number">3.3.</span> <span class="toc-text">停用暂时不用的脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%A1%A5%E5%85%85%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BE%A7%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BF%9D%E6%8A%A4"><span class="toc-number">4.</span> <span class="toc-text">四、补充浏览器侧的基础保护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BF%AE%E6%AD%A3%E5%85%83%E4%BF%A1%E6%81%AF%E5%92%8C%E7%BD%91%E5%9D%80%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">五、修正元信息和网址配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%9E%E9%99%85%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">六、实际做了哪些验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E4%BB%8D%E7%84%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">七、仍然存在的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%BB%A5%E5%90%8E%E6%80%8E%E6%A0%B7%E7%BB%B4%E6%8A%A4"><span class="toc-number">8.</span> <span class="toc-text">八、以后怎样维护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">9.</span> <span class="toc-text">参考资料</span></a></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -845,6 +1038,8 @@
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
