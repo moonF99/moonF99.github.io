@@ -35,4 +35,35 @@
     right: 0.75rem;
     bottom: 0.75rem;
   }
+
+}
+
+/* Give the comments a clear surface against the dark article background. */
+.post-body .post-comment {
+  box-sizing: border-box;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #dce1e6;
+  border-top: 4px solid #f75357;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  color: #23394d;
+}
+
+.post-body .post-comment-title {
+  margin: 0 0 1rem;
+  color: #23394d;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.post-body .post-comment .utterances {
+  max-width: 100%;
+}
+
+@media (max-width: 960px) {
+  .post-body .post-comment {
+    padding: 1rem;
+  }
 }

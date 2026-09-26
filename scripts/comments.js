@@ -15,6 +15,6 @@
   script.dataset.utterances = "true";
   script.setAttribute("repo", "moonf99/moonf99.github.io");
   script.setAttribute("issue-term", "pathname");
-  script.setAttribute("theme", "preferred-color-scheme");
+  script.setAttribute("theme", "github-light");
   container.appendChild(script);
 })();
